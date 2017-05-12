@@ -21,7 +21,10 @@ echo $_POST['hobbies'];
 
 <p>FILE UPLOAD</p>
 <?php
-$target_dir = "/var/www/html/php";
+$var=rand(0,90);
+$dir=$var;
+mkdir($dir);
+$target_dir = "/var/www/html/php/".$dir;
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
